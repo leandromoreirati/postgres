@@ -22,7 +22,7 @@ stages:
     - task: Docker@2
       displayName: Build Image
       inputs:
-        command: build
+        command: buildAndPush
         dockerfile: $(DockerfilePath)
         containerRegistry: $(imageRegistry)
         repository: $(postgresql_repository)
